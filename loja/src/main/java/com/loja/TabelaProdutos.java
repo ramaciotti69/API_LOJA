@@ -1,5 +1,8 @@
 package com.loja;
 
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +19,7 @@ public class TabelaProdutos {
         Produto controle = new Produto(5, "Controle", "Controle TV", 69.99);
         Produto pasta = new Produto(5, "Pasta", "Pasta de Tarefas TV", 19.99);
         Produto teclado = new Produto(5, "Teclado", "Teclado Mecanico", 299.99);
-        Produto mouse = new Produto(5, "Mouse", "Mouse Rato",59.99 );
+        Produto mouse = new Produto(5, "Mouse", "Mouse Rato", 59.99);
         Produto celular = new Produto(5, "Celular", "Celular Ultrasonico", 999.99);
 
 
@@ -44,7 +47,7 @@ public class TabelaProdutos {
 
     public Produto buscarProdutoPeloId(int produtoId) {
         Produto produtoProcurado = null;
-        for (Produto p: this.produtos) {
+        for (Produto p : this.produtos) {
             if (p.getId() == produtoId) {
                 produtoProcurado = p;
                 break;
@@ -52,6 +55,18 @@ public class TabelaProdutos {
         }
         return produtoProcurado;
     }
+
+    public Produto cadastrarNovoProduto(Produto novoProduto) {
+        int ultimoIndex = this.produtos.size() - 1;
+        Produto ultimoProduto = this.produtos.get(ultimoIndex);
+        int proximoId = ultimoProduto.getId() + 1;
+
+        novoProduto.setId();
+        this.produtos.add(novoProduto);
+        return novoProduto;
+    }
+
+
 
 }
 
