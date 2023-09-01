@@ -14,6 +14,11 @@ public class TabelaProdutos {
         Produto apontador = new Produto(4, "Apontador", "Faber Castel", 7.99);
         Produto caderno = new Produto(5, "Caderno", "Caderno 96 folhas", 15.99);
         Produto controle = new Produto(5, "Controle", "Controle TV", 69.99);
+        Produto pasta = new Produto(5, "Pasta", "Pasta de Tarefas TV", 19.99);
+        Produto teclado = new Produto(5, "Teclado", "Teclado Mecanico", 299.99);
+        Produto mouse = new Produto(5, "Mouse", "Mouse Rato",59.99 );
+        Produto celular = new Produto(5, "Celular", "Celular Ultrasonico", 999.99);
+
 
         this.produtos.add(caneta);
         this.produtos.add(borracha);
@@ -21,6 +26,10 @@ public class TabelaProdutos {
         this.produtos.add(apontador);
         this.produtos.add(caderno);
         this.produtos.add(controle);
+        this.produtos.add(pasta);
+        this.produtos.add(teclado);
+        this.produtos.add(mouse);
+        this.produtos.add(celular);
 
     }
 
