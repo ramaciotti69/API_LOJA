@@ -15,7 +15,6 @@ public class Produto {
 
     public int getId() {
         return id;
-
     }
 
     public void setId(int id) {
@@ -42,6 +41,10 @@ public class Produto {
         return valorUnitario;
     }
 
+    public void setValorUnitario(double valorUnitario) {
+        this.valorUnitario = valorUnitario;
+    }
+
     @Override
     public String toString() {
         return "Produto{" +
@@ -51,13 +54,4 @@ public class Produto {
                 ", valorUnitario=" + valorUnitario +
                 '}';
     }
-
-    public void setValorUnitario(double valorUnitario) {
-        this.valorUnitario = valorUnitario;
-
-
-
-
-    }
-
 }
